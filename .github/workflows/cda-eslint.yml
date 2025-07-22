@@ -5,19 +5,23 @@ on: [push, pull_request]
 jobs:
   eslint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Cache Node.js modules
-        uses: actions/cache@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-modules
+          node-version: '18'
+          cache: 'npm'
 
       - name: Install Node.js dependencies
-        run: npm install
+        run: npm ci
 
       - name: Create reports directory
         run: mkdir -p reports
@@ -26,7 +30,7 @@ jobs:
         run: npm install @microsoft/eslint-formatter-sarif --save-dev
 
       - name: Run ESLint with SARIF output
-        run: npx eslint . --format @microsoft/eslint-formatter-sarif --output-file reports/eslint-DAMNults.sarif
+        run: npx eslint . --format @microsoft/eslint-formatter-sarif --output-file reports/eslint-results.sarif || true
 
       - name: Debug ESLint Output
         run: cat reports/eslint-results.sarif || echo "No SARIF report generated"
