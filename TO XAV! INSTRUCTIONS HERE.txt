@@ -1,0 +1,20 @@
+(CHECK IF SELENIUM INSTALLED)
+1. npm install --save-dev mocha chai selenium-webdriver
+
+# Install the package (locally or globally, doesn’t matter)…
+2. npm install --save-dev selenium-standalone
+
+# Then invoke via npx:
+3. npx selenium-standalone install
+4. npx selenium-standalone start
+
+5. NOTE THAT SERVER MUST ALREADY BE RUNNING (node server.js in cmd)
+
+6. node tests/SeleniumTest.mjs local (RUN TEST)
+
+OR
+
+1. docker pull selenium/standalone-chrome
+2. docker run -d -p 4444:4444 --name selenium-server selenium/standalone-chrome OR docker run -d --name selenium-server -p 4444:4444 selenium/standalone-chrome
+3. node tests/SeleniumTest.mjs local (RUN TEST)
+NOTE THAT SERVER MUST ALREADY BE RUNNING (node server.js in cmd)
