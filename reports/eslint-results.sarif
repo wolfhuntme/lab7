@@ -1,0 +1,164 @@
+{
+  "version": "2.1.0",
+  "$schema": "http://json.schemastore.org/sarif-2.1.0-rtm.5",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "ESLint",
+          "informationUri": "https://eslint.org",
+          "rules": [
+            {
+              "id": "no-undef",
+              "helpUri": "https://eslint.org/docs/latest/rules/no-undef",
+              "properties": {},
+              "shortDescription": {
+                "text": "Disallow the use of undeclared variables unless mentioned in `/*global */` comments"
+              }
+            }
+          ],
+          "version": "9.31.0"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/xavie/Downloads/SSD%20Labs/Lab7/github-actions-nodejs-test/ssd-lab7/src/server.js"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/xavie/Downloads/SSD%20Labs/Lab7/github-actions-nodejs-test/ssd-lab7/tests/SeleniumTest.mjs"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/xavie/Downloads/SSD%20Labs/Lab7/github-actions-nodejs-test/ssd-lab7/tests/test.js"
+          }
+        }
+      ],
+      "results": [
+        {
+          "level": "error",
+          "message": {
+            "text": "'process' is not defined."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/xavie/Downloads/SSD%20Labs/Lab7/github-actions-nodejs-test/ssd-lab7/tests/SeleniumTest.mjs",
+                  "index": 1
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 21,
+                  "endLine": 5,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "ruleId": "no-undef",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'describe' is not defined."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/xavie/Downloads/SSD%20Labs/Lab7/github-actions-nodejs-test/ssd-lab7/tests/test.js",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 1,
+                  "endLine": 9,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "ruleId": "no-undef",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'it' is not defined."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/xavie/Downloads/SSD%20Labs/Lab7/github-actions-nodejs-test/ssd-lab7/tests/test.js",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 3,
+                  "endLine": 11,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "ruleId": "no-undef",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'it' is not defined."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/xavie/Downloads/SSD%20Labs/Lab7/github-actions-nodejs-test/ssd-lab7/tests/test.js",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 3,
+                  "endLine": 21,
+                  "endColumn": 5
+                }
+              }
+            }
+          ],
+          "ruleId": "no-undef",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'after' is not defined."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/xavie/Downloads/SSD%20Labs/Lab7/github-actions-nodejs-test/ssd-lab7/tests/test.js",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 3,
+                  "endLine": 31,
+                  "endColumn": 8
+                }
+              }
+            }
+          ],
+          "ruleId": "no-undef",
+          "ruleIndex": 0
+        }
+      ]
+    }
+  ]
+}
