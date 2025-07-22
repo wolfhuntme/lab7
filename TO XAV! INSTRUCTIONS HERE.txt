@@ -1,3 +1,6 @@
+FOR LAB 7
+
+
 (CHECK IF SELENIUM INSTALLED)
 1. npm install --save-dev mocha chai selenium-webdriver
 
